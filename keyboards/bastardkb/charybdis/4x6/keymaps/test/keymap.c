@@ -158,19 +158,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void rgb_matrix_update_pwm_buffers(void);
 #endif
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        uprintf("Key pressed: %u at row %u col %u\n", keycode, record->event.key.row, record->event.key.col);
-    }
-    return true;
-}
-
-void matrix_scan_user(void) {
-    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
-        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
-            if (matrix_is_on(row, col)) {
-                uprintf("Matrix ON -> row: %d, col: %d\n", row, col);
-            }
-        }
-    }
+void keyboard_post_init_user(void) {
+    uprintf("🔌 Teclado inicializado. Lado: %s\n", is_keyboard_master() ? "MAESTRO" : "ESCLAVO");
 }
