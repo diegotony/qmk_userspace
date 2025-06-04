@@ -1,3 +1,5 @@
 VIA_ENABLE = yes
 CONSOLE_ENABLE = yes
 DEBUG_ENABLE = yes
+SPLIT_KEYBOARD = yes
+EE_HANDS = yes
