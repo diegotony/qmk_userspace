@@ -159,5 +159,5 @@ void rgb_matrix_update_pwm_buffers(void);
 #endif
 
 void keyboard_post_init_user(void) {
-    uprintf("🔌 Teclado inicializado. Lado: %s\n", is_keyboard_master() ? "MAESTRO" : "ESCLAVO");
+    uprintf("Teclado inicializado. Lado: %s\n", is_keyboard_master() ? "MAESTRO" : "ESCLAVO");
 }
