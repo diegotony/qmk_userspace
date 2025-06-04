@@ -1,1 +1,3 @@
 VIA_ENABLE = yes
+CONSOLE_ENABLE = yes
+DEBUG_ENABLE = yes
