@@ -162,11 +162,3 @@ void keyboard_post_init_user(void) {
     uprintf("Teclado inicializado. Lado: %s\n", is_keyboard_master() ? "MAESTRO" : "ESCLAVO");
 }
 
-
-bool is_keyboard_left(void) {
-    return false; // esto sería para el lado derecho
-}
-
-bool is_keyboard_left(void) {
-    return true;
-}
